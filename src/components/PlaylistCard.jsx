@@ -84,10 +84,10 @@ const PlaylistCard = () => {
               />
             </div>
             <div className="px-3 pt-2">
-              <h1 className="xl:text-xl text-[55px] truncate max-340:text-[22px]">
+              <h1 className="xl:text-xl text-[55px] truncate max-340:text-[22px] max-560:text-[30px]">
                 {meta ? meta.title : item.folder}
               </h1>
-              <p className="xl:text-[12px] text-[33px] max-340:text-[18px] text-gray-400 truncate">
+              <p className="xl:text-[12px] text-[33px] max-340:text-[18px] max-560:text-[25px] text-gray-400 truncate">
                 {meta ? meta.description : "No description"}
               </p>
             </div>
