@@ -80,7 +80,7 @@ const PlaylistCard = () => {
               <img
                 src="./svgs/playbtn.svg"
                 alt="playbutton"
-                className="xl:h-9 xl:w-9 h-14 w-14 absolute bottom-6 right-4 scale-50 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-700 max-340:w-7 max-340:h-7"
+                className="xl:h-9 xl:w-9 h-14 w-14 absolute bottom-6 right-4 scale-50 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-700 max-340:w-7 max-340:h-7 max-560:w-9 max-560:h-9 "
               />
             </div>
             <div className="px-3 pt-2">
