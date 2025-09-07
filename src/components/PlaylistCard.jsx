@@ -65,7 +65,7 @@ const PlaylistCard = () => {
           <div
             key={idx}
             onClick={() => setSelectedFolder(item.folder)}
-            className="h-fit max-340:w-[70vw] sm:w-[35vw] lg:w-[40vw] sm:ml-5 xl:w-[190px] bg-[#252525] group hover:bg-[#4b4747] transition-all duration-200 rounded-lg cursor-pointer"
+            className="h-fit max-340:w-[60vw] max-340:ml-4 max-340:mt-2 sm:w-[35vw] lg:w-[40vw] sm:ml-5 xl:w-[190px] bg-[#252525] group hover:bg-[#4b4747] transition-all duration-200 rounded-lg cursor-pointer "
           >
             <div className="flex justify-center items-center relative">
               <img
