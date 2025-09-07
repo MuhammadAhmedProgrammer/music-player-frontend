@@ -65,7 +65,7 @@ const PlaylistCard = () => {
           <div
             key={idx}
             onClick={() => setSelectedFolder(item.folder)}
-            className="h-fit max-340:w-[60vw] max-340:ml-4 max-340:mt-2 sm:w-[35vw] lg:w-[40vw] sm:ml-5 xl:w-[190px] bg-[#252525] group hover:bg-[#4b4747] transition-all duration-200 rounded-lg cursor-pointer "
+            className="h-fit max-340:w-[60vw] max-340:ml-2 max-340:mt-2 sm:w-[35vw] lg:w-[40vw] sm:ml-5 xl:w-[190px] bg-[#252525] group hover:bg-[#4b4747] transition-all duration-200 rounded-lg cursor-pointer "
           >
             <div className="flex justify-center items-center relative">
               <img
@@ -80,7 +80,7 @@ const PlaylistCard = () => {
               <img
                 src="./svgs/playbtn.svg"
                 alt="playbutton"
-                className="xl:h-9 xl:w-9 h-14 w-14 absolute bottom-6 right-4 scale-50 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-700"
+                className="xl:h-9 xl:w-9 h-14 w-14 absolute bottom-6 right-4 scale-50 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-700 max-340:w-7 max-340:h-7"
               />
             </div>
             <div className="px-3 pt-2">
