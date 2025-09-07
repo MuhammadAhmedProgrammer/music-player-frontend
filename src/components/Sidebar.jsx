@@ -125,7 +125,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
                     onClick={() => playSong(songUrl, i)}
                   >
                     <div className="flex flex-col text-white">
-                      <h3 className="truncate max-340:text-[12px]">{file}</h3>
+                      <h3 className="truncate max-340:text-[12px]">{file.replace(/\.mp3$/i, "")}</h3>
                       <h4 className="text-sm text-gray-400 max-340:text-[10px]">Unknown Artist</h4>
                     </div>
                     <div className="flex gap-3 items-center text-white ">
