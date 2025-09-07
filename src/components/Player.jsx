@@ -16,13 +16,13 @@ const Player = () => {
 
     return (
         <div className='flex justify-center'>
-            <div className='flex justify-center items-center flex-col fixed w-[88vw] xl:w-[70vw] bottom-16 xl:bottom-10'>
-                <div className='flex justify-between items-center bg-[#121212] hover:bg-[#4b4747] transition-all duration-700 w-full p-3 rounded-2xl '>
-                    <h1>{currSongUrl ? decodeURIComponent(currSongUrl.split('/').pop()) : "No song selected"}</h1>
+            <div className='flex justify-center items-center flex-col fixed max-560:w-[80%] xl:w-[70vw] max-1000:bottom-4 max-560:bottom-12 xl:bottom-10'>
+                <div className='flex justify-between items-center bg-[#121212] hover:bg-[#4b4747] transition-all duration-700 w-full p-3 max-340:rounded-lg max-340:w-[100%] max-340:p-1 rounded-2xl max-560:p-0 '>
+                    <h1 className='max-560:text-[10px]'>{currSongUrl ? decodeURIComponent(currSongUrl.split('/').pop()) : "No song selected"}</h1>
 
-                    <div className='flex items-center gap-4 cursor-pointer'>
+                    <div className='flex items-center gap-4 max-560:gap-2 cursor-pointer'>
                         <img src="/svgs/previoussong.svg" alt="previous"
-                            className='invert w-7 h-7 sm:w-8 sm:h-8 cursor-pointer' onClick={prevSong} />
+                            className='invert w-7 h-7 sm:w-8 sm:h-8 max-560:h-5 max-560:w-5 cursor-pointer' onClick={prevSong} />
                         <img
                             src={
                                 isEnded
@@ -32,7 +32,7 @@ const Player = () => {
                                         : "/svgs/play.svg"
                             }
                             alt={isEnded ? "replay" : isPlaying ? "pause" : "play"}
-                            className="invert w-5 h-5 sm:w-7 sm:h-7 cursor-pointer"
+                            className="invert w-5 h-5 sm:w-7 sm:h-7 cursor-pointer max-560:h-4 max-560:w-4"
                             onClick={() => {
                                 if (isEnded) {
                                     replaySong();   // ✅ restart song
@@ -42,17 +42,17 @@ const Player = () => {
                             }}
                         />
                         <img src="/svgs/nextsong.svg" alt="next"
-                            className='invert w-7 h-7 sm:w-8 sm:h-8 cursor-pointer' onClick={nextSong} />
+                            className='invert w-7 h-7 sm:w-8 sm:h-8 cursor-pointer max-560:h-5 max-560:w-5' onClick={nextSong} />
                     </div>
 
                     {/* Time + Volume */}
                     <div className='gap-2 flex flex-col items-end'>
-                        <h2>{formatTime(currentTime)} / {formatTime(duration)}</h2>
-                        <div className='flex gap-6 sm:gap-3  items-center relative bottom-2 justify-center'>
+                        <h2 className='max-560:text-[10px]'>{formatTime(currentTime)} / {formatTime(duration)}</h2>
+                        <div className='flex gap-6 sm:gap-3 max-560:gap-2  items-center relative bottom-2 justify-center'>
                             <img
                                 src={isMuted ? "/svgs/mute.png" : "/svgs/volume.png"}
                                 alt={isMuted ? "mute" : "volume"}
-                                className="invert w-5 h-5 sm:w-6 sm:h-6 cursor-pointer"
+                                className="invert w-5 h-5 sm:w-6 sm:h-6 cursor-pointer max-560:w-4 max-560:h-4"
                                 onClick={toggleMute}
                             />
                             <input
@@ -60,7 +60,7 @@ const Player = () => {
                                 min="0" max="1" step="0.01"
                                 value={isMuted ? 0 : volume}   // slider shows 0 when muted
                                 onChange={(e) => changeVolume(parseFloat(e.target.value))}
-                                className="w-[12vw] sm:w-[6vw]"
+                                className="w-[12vw] sm:w-[6vw] max-560:w-14"
                             />
 
                         </div>

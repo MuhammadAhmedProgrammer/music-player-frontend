@@ -125,15 +125,15 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
                     onClick={() => playSong(songUrl, i)}
                   >
                     <div className="flex flex-col text-white">
-                      <h3 className="truncate">{file}</h3>
-                      <h4 className="text-sm text-gray-400">Unknown Artist</h4>
+                      <h3 className="truncate max-340:text-[12px]">{file}</h3>
+                      <h4 className="text-sm text-gray-400 max-340:text-[10px]">Unknown Artist</h4>
                     </div>
-                    <div className="flex gap-3 items-center text-white">
-                      <h2 className="text-sm">{isPlayingThisSong ? "Playing" : "Play"}</h2>
+                    <div className="flex gap-3 items-center text-white ">
+                      <h2 className="text-sm max-340:text-[12px]">{isPlayingThisSong ? "Playing" : "Play"}</h2>
                       <img
                         src={isPlayingThisSong ? "/svgs/pause.svg" : "/svgs/play.svg"}
                         alt={isPlayingThisSong ? "pause" : "play"}
-                        className="invert w-6"
+                        className="invert w-6 max-340:w-4"
                       />
                     </div>
                   </li>

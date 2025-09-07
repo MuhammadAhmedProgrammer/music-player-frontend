@@ -11,8 +11,8 @@ const Header = ({ setIsSidebarOpen }) => {
             className="invert w-[32px] h-[32px] xl:hidden block cursor-pointer"
             onClick={() => setIsSidebarOpen(true)} // open
           />
-          <img src="/svgs/left.svg" alt="left" className="invert" />
-          <img src="/svgs/right.svg" alt="right" className="invert" />
+          <img src="/svgs/left.svg" alt="left" className="invert max-560:hidden" />
+          <img src="/svgs/right.svg" alt="right" className="invert max-560:hidden" />
         </div>
         <div className="flex gap-6">
           <button className="text-[#9a8e88] font-bold hover:text-white">Sign Up</button>
